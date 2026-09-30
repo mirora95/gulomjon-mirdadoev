@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Гуломджон Мирдадоев — певец</title>
+  <meta name="description" content="Гуломджон Мирдадоев — певец из Таджикистана. Свадьбы, концерты, корпоративы и праздники. Клипы, песни и бронирование.">
+  <meta property="og:title" content="Гуломджон Мирдадоев — певец">
+  <meta property="og:description" content="Свадьбы, концерты, корпоративы. Слушайте песни и бронируйте выступление.">
+  <meta property="og:image" content="img/og.jpg">
+  <meta name="theme-color" content="#0D0D0F">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%230D0D0F'/><text x='16' y='22' font-size='16' text-anchor='middle' fill='%23C9A45C' font-family='serif'>ГМ</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="nav" id="top">
+  <div class="container nav__inner">
+    <a href="#top" class="nav__logo">Гуломджон <span>Мирдадоев</span></a>
+    <nav class="nav__links" id="navLinks">
+      <a href="#about">О себе</a>
+      <a href="#clips">Клипы</a>
+      <a href="#music">Песни</a>
+      <a href="#services">Услуги</a>
+      <a href="#contact">Контакты</a>
+    </nav>
+    <a href="#contact" class="btn btn--gold btn--sm nav__cta">Пригласить</a>
+    <button class="nav__burger" id="burger" aria-label="Меню" aria-expanded="false"><span></span><span></span></button>
+  </div>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero__bg"></div>
+    <div class="container hero__content">
+      <p class="eyebrow">Певец · Таджикистан</p>
+      <h1 class="hero__title">Гуломджон<br>Мирдадоев</h1>
+      <p class="hero__lead">Живой голос для вашей свадьбы, тоя, концерта и праздника. Таджикские и узбекские песни, от лирики до зажигательных танцевальных хитов.</p>
+      <div class="hero__actions">
+        <a class="btn btn--gold" href="#contact">Забронировать дату</a>
+        <a class="btn btn--ghost" href="#clips">▶&nbsp; Смотреть клипы</a>
+      </div>
+      <ul class="stats">
+        <li><strong>590&nbsp;тыс.</strong><span>просмотров «Фаргона рубоийси»</span></li>
+        <li><strong>36</strong><span>видео на YouTube</span></li>
+        <li><strong>3,1&nbsp;тыс.</strong><span>подписчиков</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <div class="container about">
+      <div class="about__photo">
+        <img src="img/gulomjon.webp" alt="Гуломджон Мирдадоев" width="800" height="800" loading="lazy">
+      </div>
+      <div class="about__text">
+        <p class="eyebrow">О себе</p>
+        <h2 class="h2">Песни, которые поют всем залом</h2>
+        <p>Гуломджон Мирдадоев — исполнитель из Таджикистана, артист-вокалист ансамбля «Садои Суғд». В его репертуаре таджикские и узбекские песни: лирические баллады, народные мелодии и весёлые танцевальные композиции для праздника.</p>
+        <p>В 2024 году прошёл его сольный концерт «Гулчини сурудҳо», видео с которого собрали сотни тысяч просмотров. Сегодня Гуломджон выпускает новые клипы и выступает на свадьбах, тоях, концертах и частных мероприятиях.</p>
+        <div class="about__tags">
+          <span>Ансамбль «Садои Суғд»</span><span>Свадьбы и тои</span><span>Концерты</span><span>Живой вокал</span><span>RU · TJ · UZ</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLIPS -->
+  <section class="section section--alt" id="clips">
+    <div class="container">
+      <div class="section__head">
+        <div>
+          <p class="eyebrow">Новые клипы</p>
+          <h2 class="h2">Видео</h2>
+        </div>
+        <a class="link-arrow" href="https://www.youtube.com/@GulomjonMirdadoevMusic" target="_blank" rel="noopener">Все видео на YouTube →</a>
+      </div>
+      <div class="tabs tabs--mb" id="videoTabs">
+        <button class="tab active" data-tab="clips" type="button">Клипы</button>
+        <button class="tab" data-tab="concert" type="button">Концерт «Гулчини сурудҳо», 2024</button>
+      </div>
+      <div class="grid grid--clips" id="clipsGrid"></div>
+      <div class="grid grid--concert" id="concertGrid" hidden></div>
+    </div>
+  </section>
+
+  <!-- MUSIC -->
+  <section class="section" id="music">
+    <div class="container">
+      <div class="section__head">
+        <div>
+          <p class="eyebrow" id="songCount">Аудио</p>
+          <h2 class="h2">Песни</h2>
+        </div>
+        <button class="btn btn--gold" id="playAll" type="button">▶&nbsp; Слушать всё</button>
+      </div>
+      <div class="music__bar">
+        <div class="tabs" id="songTabs">
+          <button class="tab active" data-group="all" type="button">Все</button>
+          <button class="tab" data-group="new" type="button">Новые</button>
+          <button class="tab" data-group="more" type="button">Ещё песни</button>
+          <button class="tab" data-group="y2016" type="button">2016</button>
+        </div>
+        <input class="search" id="songSearch" type="search" placeholder="Поиск песни…" aria-label="Поиск песни">
+      </div>
+      <ol class="songs" id="songList"></ol>
+      <p class="muted small songs__empty" id="songEmpty" hidden>Ничего не найдено.</p>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="section section--alt" id="services">
+    <div class="container">
+      <div class="section__head">
+        <div>
+          <p class="eyebrow">Выступления</p>
+          <h2 class="h2">Куда пригласить</h2>
+        </div>
+      </div>
+      <div class="grid grid--services">
+        <article class="card service">
+          <div class="service__icon">💍</div>
+          <h3>Свадьбы и тои</h3>
+          <p>Выступление на свадьбе, никохе и тое: от торжественного выхода молодых до танцев до утра.</p>
+        </article>
+        <article class="card service">
+          <div class="service__icon">🎤</div>
+          <h3>Концерты</h3>
+          <p>Сольные программы и участие в сборных концертах, фестивалях и городских праздниках.</p>
+        </article>
+        <article class="card service">
+          <div class="service__icon">🥂</div>
+          <h3>Корпоративы</h3>
+          <p>Праздничные вечера для компаний, презентации, юбилеи организаций.</p>
+        </article>
+        <article class="card service">
+          <div class="service__icon">🎉</div>
+          <h3>Дни рождения и юбилеи</h3>
+          <p>Семейные торжества, сюннат-тои, юбилеи и любые личные праздники.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section" id="contact">
+    <div class="container contact">
+      <div class="contact__info">
+        <p class="eyebrow">Бронирование</p>
+        <h2 class="h2">Пригласите Гуломджона на ваш праздник</h2>
+        <p class="muted">Напишите дату, город и тип мероприятия, и мы ответим в течение дня. Удобнее всего в WhatsApp или Telegram.</p>
+        <div class="contact__buttons">
+          <a class="btn btn--wa" href="https://wa.me/992928720024?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BF%D1%80%D0%B8%D0%B3%D0%BB%D0%B0%D1%81%D0%B8%D1%82%D1%8C%20%D0%93%D1%83%D0%BB%D0%BE%D0%BC%D0%B4%D0%B6%D0%BE%D0%BD%D0%B0%20%D0%BD%D0%B0%20%D0%BC%D0%B5%D1%80%D0%BE%D0%BF%D1%80%D0%B8%D1%8F%D1%82%D0%B8%D0%B5." target="_blank" rel="noopener">WhatsApp</a>
+          <a class="btn btn--tg" href="https://t.me/+992928720024" target="_blank" rel="noopener">Telegram</a>
+          <a class="btn btn--ghost" href="tel:+992928720024">+992 92 872 00 24</a>
+        </div>
+        <p class="muted small contact__channel">Новые песни и видео первыми — в Telegram-канале <a href="https://t.me/gulomjonmirdadoev" target="_blank" rel="noopener">@gulomjonmirdadoev</a></p>
+      </div>
+
+      <form class="card booking" id="bookingForm" novalidate>
+        <h3>Быстрая заявка</h3>
+        <p class="muted small">Текст заявки скопируется, и откроется чат в Telegram. Вставьте его и отправьте.</p>
+        <label>Ваше имя
+          <input name="name" type="text" placeholder="Например, Фаррух" required>
+        </label>
+        <div class="booking__row">
+          <label>Мероприятие
+            <select name="type">
+              <option>Свадьба / той</option>
+              <option>Концерт</option>
+              <option>Корпоратив</option>
+              <option>День рождения / юбилей</option>
+              <option>Другое</option>
+            </select>
+          </label>
+          <label>Дата
+            <input name="date" type="date">
+          </label>
+        </div>
+        <label>Город
+          <input name="city" type="text" placeholder="Душанбе">
+        </label>
+        <label>Комментарий
+          <textarea name="note" rows="3" placeholder="Количество гостей, место, пожелания"></textarea>
+        </label>
+        <button class="btn btn--gold btn--block" type="submit">Отправить заявку в Telegram</button>
+        <p class="booking__note" id="bookingNote" hidden>✓ Текст заявки скопирован. Вставьте его в чат Telegram и нажмите «Отправить».</p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <div>
+      <div class="nav__logo">Гуломджон <span>Мирдадоев</span></div>
+      <p class="muted small">© <span id="year"></span> Все права защищены.</p>
+    </div>
+    <div class="socials">
+      <a href="https://www.youtube.com/@GulomjonMirdadoevMusic" target="_blank" rel="noopener" aria-label="YouTube">
+        <svg viewBox="0 0 24 24"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12 31 31 0 0 0 1 16.8a3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8ZM9.7 15.1V8.9L15.5 12l-5.8 3.1Z"/></svg>
+      </a>
+      <a href="https://www.instagram.com/gulomjonmirdadoev/" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 3.3.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 3.2-1.7 4.8-4.9 4.9-1.3.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-3.3-.1-4.8-1.7-4.9-4.9C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8C2.4 3.9 3.9 2.4 7.2 2.3 8.4 2.2 8.8 2.2 12 2.2Zm0 4.9a4.9 4.9 0 1 0 0 9.8 4.9 4.9 0 0 0 0-9.8Zm0 8.1a3.2 3.2 0 1 1 0-6.4 3.2 3.2 0 0 1 0 6.4Zm5.1-9.4a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4Z"/></svg>
+      </a>
+      <a href="https://t.me/gulomjonmirdadoev" target="_blank" rel="noopener" aria-label="Telegram-канал">
+        <svg viewBox="0 0 24 24"><path d="M21.9 4.3 18.6 20c-.2 1.1-.9 1.4-1.8.9l-5-3.7-2.4 2.3c-.3.3-.5.5-1 .5l.4-5.1 9.3-8.4c.4-.4-.1-.6-.6-.2L6 13.5 1 12c-1.1-.3-1.1-1.1.2-1.6L20.5 3c.9-.3 1.7.2 1.4 1.3Z"/></svg>
+      </a>
+      <a href="https://wa.me/992928720024" target="_blank" rel="noopener" aria-label="WhatsApp">
+        <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.8 14.1c-.2.7-1.4 1.3-2 1.4-.5.1-1.2.1-1.9-.1-.4-.1-1-.3-1.7-.6-3-1.3-4.9-4.3-5.1-4.5-.1-.2-1.2-1.6-1.2-3.1s.8-2.2 1-2.5c.3-.3.6-.4.8-.4h.6c.2 0 .4 0 .6.5l.9 2.1c.1.1.1.3 0 .5l-.3.5-.4.5c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.6-.1l2 1c.3.1.5.2.5.3.1.1.1.7-.1 1.4Z"/></svg>
+      </a>
+    </div>
+  </div>
+</footer>
+
+<!-- Video modal -->
+<div class="modal" id="modal" hidden>
+  <div class="modal__backdrop" data-close></div>
+  <div class="modal__box">
+    <button class="modal__close" data-close aria-label="Закрыть">✕</button>
+    <div class="modal__video" id="modalVideo"></div>
+  </div>
+</div>
+
+<!-- Audio player (bottom bar) -->
+<div class="ap" id="ap" hidden>
+  <div class="ap__progress" id="apSeek"><div class="ap__fill" id="apFill"></div></div>
+  <div class="container ap__inner">
+    <div class="ap__info">
+      <img class="ap__cover" src="img/gulomjon-sm.webp" alt="">
+      <div class="ap__text">
+        <div class="ap__title" id="apTitle">—</div>
+        <div class="ap__artist">Гуломджон Мирдадоев</div>
+      </div>
+    </div>
+    <div class="ap__controls">
+      <button class="ap__btn" id="apPrev" type="button" aria-label="Предыдущая">
+        <svg viewBox="0 0 24 24"><path d="M6 5h2v14H6zM20 5v14L9 12z"/></svg>
+      </button>
+      <button class="ap__btn ap__btn--main" id="apPlay" type="button" aria-label="Воспроизвести">
+        <svg class="i-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+        <svg class="i-pause" viewBox="0 0 24 24"><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg>
+      </button>
+      <button class="ap__btn" id="apNext" type="button" aria-label="Следующая">
+        <svg viewBox="0 0 24 24"><path d="M16 5h2v14h-2zM4 5v14l11-7z"/></svg>
+      </button>
+    </div>
+    <div class="ap__time"><span id="apCur">0:00</span> / <span id="apDur">0:00</span></div>
+  </div>
+  <audio id="audio" preload="none"></audio>
+</div>
+
+<script src="songs.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
